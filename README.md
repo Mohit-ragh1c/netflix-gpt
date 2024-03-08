@@ -1,10 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # netflix-gpt
 =======
 # Getting Started with Create React App
+=======
+create react app
+configured tailwind
+make sign in / sign up form
+make validation using regex
+>>>>>>> eed1411 (add initial project working)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+firebase setup
+implement sign up and sing in using firebase
 
+<<<<<<< HEAD
 ## Available Scripts
 
 In the project directory, you can run:
@@ -72,3 +81,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 >>>>>>> 40025f4 (Initialize project using Create React App)
+=======
+create redux store
+make user slice
+>>>>>>> eed1411 (add initial project working)
