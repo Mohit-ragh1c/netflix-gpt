@@ -42,13 +42,11 @@ const Login = () => {
 
           const {uid,email,displayName,photoURL}=auth.currentUser;
         dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
-        
-          navigate("/browse");
 
         }).catch((e)=>{
           console.log("error in updating user profile");
         })
-        console.log(user);
+  
        })
        .catch((e)=>{
         const errorcode=e.code;
@@ -62,8 +60,6 @@ const Login = () => {
         await signInWithEmailAndPassword(auth,email.current.value,password.current.value)
         .then((userCredential)=>{
           const user=userCredential.user;
-          navigate("/browse");
-          console.log(user);
           
         })
         .catch((e)=>{
