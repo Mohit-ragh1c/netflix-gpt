@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { OPTIONS } from '../constants/constant';
 import { useDispatch, useSelector } from 'react-redux';
 import { addtrailervideo } from '../utils/movieSlice';
+import { useNavigate } from 'react-router-dom';
+
 
 const Videobackground = ({ id }) => {
   const trailer = useSelector(store => store.movies?.trailervideo)
   const dispatch = useDispatch();
+  const navigate=useNavigate();
+  
   
   // this is trailer movie data and api
 
@@ -23,6 +27,7 @@ const Videobackground = ({ id }) => {
     dispatch(addtrailervideo(trailer));
 
   }
+  // https://api.themoviedb.org/3/movie/400117/videos
 
   useEffect(() => {
   
@@ -33,9 +38,10 @@ const Videobackground = ({ id }) => {
   if (!trailer) return "loading";
   return (
     <div className="w-screen">
+
       <iframe
         className="w-screen aspect-video"
-        src={"https://www.youtube.com/embed/" + trailer.key + "?&autoplay=1&mute=1"} title="YouTube video player" allow=" autoplay ;  gyroscope; picture-in-picture;" ></iframe>
+        src={"https://www.youtube.com/embed/" + trailer.key + "?&autoplay=1&mute=1&vq=small"} title="YouTube video player" allow=" autoplay ;  gyroscope; picture-in-picture;" ></iframe>
     </div>
   )
 }

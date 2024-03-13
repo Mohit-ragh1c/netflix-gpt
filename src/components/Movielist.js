@@ -11,7 +11,7 @@ if(!movie) return "loading";
         <div className="flex">
     {
         movie?.map((one)=>(
-            <Moviecard key={one.id} path={one?.poster_path}></Moviecard>
+            <Moviecard key={one.id} path={one?.poster_path} movie={one} ></Moviecard>
         ))
     }
     </div>
